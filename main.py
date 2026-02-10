@@ -1,4 +1,5 @@
 import argparse
+from data.loader import LoadData
 
 parser = argparse.ArgumentParser()
 parser.add_argument('city', help='location')
@@ -9,8 +10,7 @@ args = parser.parse_args()
 
 def main():
 
-    if args.__dict__['method'] == 'html':
-        pass
+    data = LoadData(args)
     # data = fetch_weather("Amsterdam")
     # df = to_dataframe(data)
     #
